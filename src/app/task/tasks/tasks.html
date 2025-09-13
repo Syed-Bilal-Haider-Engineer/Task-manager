@@ -1,10 +1,12 @@
-<article>
+<app-card>
+  <article>
     <h2>
       {{ task.title }}
     </h2>
-    <time datetime="2008-02-14 20:00">{{task.dueDate}}</time>
+    <time datetime="2008-02-14 20:00">{{task.dueDate | date:"fullDate"}}</time>
     <p>{{task.summary}}</p>
     <p class="actions">
-      <button>Complete</button>
+      <button (click)="onDeletTasks(task.id)">Complete</button>
     </p> 
-</article>
+  </article>
+</app-card>

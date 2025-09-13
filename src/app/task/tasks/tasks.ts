@@ -1,16 +1,21 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { DatePipe } from '@angular/common';
+
 import TaskType from '../../../types/taskTypes';
+import { Card } from "../../shared/card/card";
+
 
 @Component({
   selector: 'app-tasks',
-  imports: [],
+  imports: [Card,DatePipe],
   templateUrl: './tasks.html',
   styleUrls: ['./tasks.css']  
 })
 export class Tasks {
   @Input({ required: true }) task!: TaskType;
+  @Output() onCompleteTaskMethod = new EventEmitter<string>();
 
-  ngOnInit() {
-    console.log("this.task", this.task); 
+  onDeletTasks(taskId:string){
+   this.onCompleteTaskMethod.emit(taskId)
   }
 }

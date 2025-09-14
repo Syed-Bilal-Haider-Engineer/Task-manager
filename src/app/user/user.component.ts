@@ -1,13 +1,13 @@
 import { Component, computed, EventEmitter, Input, output, Output } from '@angular/core';
-import  UserType from '../../types/userTypes';
+import  UserType from './user.model';
 import { Card } from "../shared/card/card";
 @Component({
   selector: 'app-user',
   imports: [Card],
-  templateUrl: './user.html',
-  styleUrl: './user.css'
+  templateUrl: './user.component.html',
+  styleUrl: './user.component.css'
 })
-export class User {
+export class UserComponent {
   @Input({required:true}) user!: UserType;
   @Input({required:true}) selectUserID!: string
   userSelected = output<string>();

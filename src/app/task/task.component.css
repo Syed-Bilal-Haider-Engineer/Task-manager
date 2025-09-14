@@ -62,3 +62,21 @@ ul {
     width: auto;
   }
 }
+
+
+.task-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.task-container::-webkit-scrollbar-thumb {
+  background-color: #4caf50;
+  border-radius: 4px;
+}
+
+.task-container::-webkit-scrollbar-thumb:hover {
+  background-color: #45a049;
+}
+.task-container::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+  border-radius: 4px;
+}

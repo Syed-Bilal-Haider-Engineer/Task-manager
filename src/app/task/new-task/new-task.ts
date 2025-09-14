@@ -1,29 +1,38 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, inject, Input, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import {type NewTaskData} from '../../../types/taskTypes'
+
+import { TaskService } from '../task.service';
 @Component({
   selector: 'app-new-task',
   imports: [FormsModule],
   templateUrl: './new-task.html',
-  styleUrls: ['./new-task.css']
+  styleUrls: ['./new-task.css'],
 })
-export class NewTask {
-  @Output() canceled = new EventEmitter<void>();
-  @Output() onAdd = new EventEmitter<NewTaskData>()
-  title ='';
+export class NewTaskComponent {
+  @Input({ required: true }) userId!: string;
+  @Output() onClose = new EventEmitter<void>();
+  title = '';
   summary = '';
   date = '';
 
-  onCancel() {
-    this.canceled.emit();
-  }
+  private taskService = inject(TaskService);
 
-  onSubmit() {
-    this.onAdd.emit({
+  onCloseHanlde() {
+    this.onClose.emit();
+  }
+    onSubmit() {
+      this.taskService.addTask({
+        id: Date.now().toString(36) + Math.random().toString(36).substring(2, 6),
         title: this.title,
         summary: this.summary,
-        date: this.date
+        dueDate: this.date,
+        userId: this.userId,
       });
-    }
- }
-  
+    
+      this.title = '';
+      this.summary = '';
+      this.date = '';
+    
+      this.onClose.emit();
+  }
+}

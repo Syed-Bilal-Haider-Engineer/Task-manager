@@ -1,14 +1,14 @@
 import { Component, signal } from '@angular/core';
 import { HeaderComponent } from './header/header';
-import { User } from "./user/user";
+import { UserComponent } from "./user/user.component";
 import { DUMMY_USERS } from './dummy-users';
-import UserType from '../types/userTypes';
-import { Task } from './task/task';
+import UserType from './user/user.model';
+import { TaskComponent } from './task/task.component';
 // import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [HeaderComponent, User, Task],
+  imports: [HeaderComponent, UserComponent, TaskComponent],
   templateUrl: './app.html',
   styleUrls: ['./app.css']
 })

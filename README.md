@@ -25,7 +25,7 @@ A fully-featured **Task Manager** application built with **Angular** that allows
 - **Styling:** CSS / SCSS  
 
 ## 🌐 Live Demo
-Check out the application here: https://chemnitz-eats-foodi.vercel.app/
+Check out the application here: https://task-manager-lyart-eight.vercel.app/
 
 ---
 

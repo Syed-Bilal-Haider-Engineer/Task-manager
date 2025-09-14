@@ -15,7 +15,7 @@ import { TaskComponent } from './task/task.component';
 export class AppComponent {
   protected readonly title = signal('task-manager-app');
   users = DUMMY_USERS;
-  selectedUserId: string ='';
+  selectedUserId: string ='u1';
 
   get selectedUser() {
     return DUMMY_USERS.find((task: UserType) => task.id === this.selectedUserId)!;

@@ -69,14 +69,14 @@ ul {
 }
 
 .task-container::-webkit-scrollbar-thumb {
-  background-color: #4caf50;
+  background-color: ##9965dd;
   border-radius: 4px;
 }
 
 .task-container::-webkit-scrollbar-thumb:hover {
-  background-color: #45a049;
+  background-color: ##9965dd;
 }
 .task-container::-webkit-scrollbar-track {
-  background-color: #f1f1f1;
+  background-color: ##9965dd;
   border-radius: 4px;
 }

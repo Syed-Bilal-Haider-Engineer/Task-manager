@@ -19,9 +19,7 @@ export class TaskComponent {
   private taskService = inject(TaskService);
 
    get getUserTasks(){
-    console.log("this.selectedUserId==>",this.selectedUserId)
     const userTask =  this.taskService.getUserTasks(this.selectedUserId);
-    console.log("userTask==>",userTask)
     return userTask;
   };
 

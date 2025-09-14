@@ -1,59 +1,79 @@
-# AngularApp
+# Task Manager App
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.2.2.
+A fully-featured **Task Manager** application built with **Angular** that allows users to manage tasks, track progress, and persist data using **localStorage**. The app demonstrates the use of Angular modules, standalone components, and signals for reactive state management.
+---
 
-## Development server
+## Features
 
-To start a local development server, run:
+- View tasks by user
+- Add new tasks
+- Delete tasks
+- Persist tasks in `localStorage`
+- Modular architecture using Angular Standalone
+- Supports both standalone
+- Optimized services using Angular Signals
+- Responsive UI and user-friendly design
+
+---
+
+## Tech Stack
+
+- **Frontend:** Angular 16+  
+- **State Management:** Angular Signals  
+- **Storage:** LocalStorage  
+- **Styling:** CSS / SCSS  
+
+---
+
+## Installation
+
+1. Clone the repository:
+
+```bash
+git clone <repository-url>
+Navigate to the project folder:
+
+```bash
+cd task-manager-app
+Install dependencies:
+```bash
+npm install
+Run the development server:
 
 ```bash
 ng serve
-```
+Open your browser and navigate to:
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+http://localhost:4200
+**Usage**
+Add Task: Use the input form to add a new task for a specific user.
 
-## Code scaffolding
+View Tasks: Tasks are displayed based on the selected user.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Delete Task: Click the delete button next to a task to remove it.
 
-```bash
-ng generate component component-name
-```
+Persistence: Tasks are automatically saved to localStorage for future sessions.
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+**How It Works**
+The app initializes tasks from localStorage if available; otherwise, it uses default dummy tasks.
 
-```bash
-ng generate --help
-```
+TaskService manages task operations using Angular signals, allowing reactive updates across components.
 
-## Building
+Feature modules (e.g., TasksModule) encapsulate task-related components and functionality.
 
-To build the project run:
+Common Angular modules like CommonModule and FormsModule are imported where needed.
 
-```bash
-ng build
-```
+**View**
+<img width="1478" height="872" alt="image" src="https://github.com/user-attachments/assets/90905a5c-6e7d-4b07-a443-e6bec42c3c6b" />
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+**Contribution**
+Contributions are welcome! You can:
+Fork the repository
+Create a feature branch: git checkout -b feature-name
+Commit your changes: git commit -m "Add feature"
+Push to the branch: git push origin feature-name
+Open a Pull Request
 
-## Running unit tests
+Push to the branch: git push origin feature-name
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Open a Pull Request

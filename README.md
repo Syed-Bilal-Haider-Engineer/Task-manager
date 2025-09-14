@@ -24,51 +24,27 @@ A fully-featured **Task Manager** application built with **Angular** that allows
 - **Storage:** LocalStorage  
 - **Styling:** CSS / SCSS  
 
+## 🌐 Live Demo
+Check out the application here: https://chemnitz-eats-foodi.vercel.app/
+
 ---
 
-## Installation
+## 📸 Screenshots
+<img width="1188" height="788" alt="image" src="https://github.com/user-attachments/assets/eb793d26-e5f7-4580-9f7c-2c628953e85b" />
 
-1. Clone the repository:
+---
 
+## 🛠️ Installation & Setup
 ```bash
-git clone <repository-url>
-Navigate to the project folder:
+# Clone the repository
+git clone https://github.com/Syed-Bilal-Haider-Engineer/Task-manager
 
+# Navigate into the project folder
+cd task-manager
 
-```bash
-cd task-manager-app
-
-Install dependencies:
-```bash
+# Install dependencies
 npm install
-Run the development server:
 
-```bash
-ng serve
+# Run the development server
+npm start
 
-Open your browser and navigate to:
-http://localhost:4200
-
-**Usage**
-Add Task: Use the input form to add a new task for a specific user.
-View Tasks: Tasks are displayed based on the selected user.
-Delete Task: Click the delete button next to a task to remove it.
-Persistence: Tasks are automatically saved to localStorage for future sessions.
-
-**How It Works**
-The app initializes tasks from localStorage if available; otherwise, it uses default dummy tasks.
-TaskService manages task operations using Angular signals, allowing reactive updates across components.
-Feature modules (e.g., TasksModule) encapsulate task-related components and functionality.
-Common Angular modules like CommonModule and FormsModule are imported where needed.
-
-**View**
-<img width="1478" height="872" alt="image" src="https://github.com/user-attachments/assets/90905a5c-6e7d-4b07-a443-e6bec42c3c6b" />
-
-
-**Contribution**
-Contributions are welcome! You can:
-Fork the repository
-Create a feature branch: git checkout -b feature-name
-Commit your changes: git commit -m "Add feature"
-Push to the branch: git push origin feature-name
-Open a Pull Request
